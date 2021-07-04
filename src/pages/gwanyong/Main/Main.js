@@ -74,7 +74,7 @@ class Main extends React.Component {
             .then((data) => {
                 this.setState({ feeds: data });
             })
-            .then((error) => console.log(error));
+            .catch((error) => console.error("Unable to get items.", error));
     }
 
     changeState = (e) => {
