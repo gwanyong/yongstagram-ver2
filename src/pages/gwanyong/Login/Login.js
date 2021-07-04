@@ -24,20 +24,21 @@ class Login extends React.Component {
     //     });
     // }
 
-    handleSubmit = (e) => {
-        fetch("http://10.58.6.223:8000/postings", {
-            method: "GET",
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.access_token) {
-                    this.goToMain();
-                } else {
-                    alert("id pw 확인");
-                }
-            });
-        e.preventDefault();
-    };
+    // 백엔드와 통신
+    // handleSubmit = (e) => {
+    //     fetch("http://10.58.6.223:8000/postings", {
+    //         method: "GET",
+    //     })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             if (data.access_token) {
+    //                 this.goToMain();
+    //             } else {
+    //                 alert("id pw 확인");
+    //             }
+    //         });
+    //     e.preventDefault();
+    // };
 
     goToMain = () => {
         const { id, pw } = this.state;
