@@ -86,7 +86,7 @@ class Login extends React.Component {
                     </section>
                     <section id="rightForm">
                         <section className="loginBox">
-                            <h1 className="title">Westagram</h1>
+                            <h1 className="title">Yongstagram</h1>
                             <form
                                 className="loginForm"
                                 onSubmit={this.handleSubmit}
