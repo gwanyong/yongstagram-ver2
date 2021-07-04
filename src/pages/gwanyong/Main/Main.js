@@ -66,10 +66,10 @@ class Main extends React.Component {
 
     componentDidMount() {
         fetch("/data/feedData.json", {
-            // headers: {
-            //     "Content-Type": "application/json",
-            //     Accept: "application/json",
-            // },
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
         })
             .then((res) => res.json())
             .then((data) => {
