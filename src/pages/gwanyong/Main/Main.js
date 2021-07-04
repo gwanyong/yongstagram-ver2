@@ -65,8 +65,9 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        fetch("/data/feedData.json", {
+        fetch("feedData.json", {
             headers: {
+                "Content-Type": "application/json",
                 Accept: "application/json",
             },
         })
@@ -74,7 +75,7 @@ class Main extends React.Component {
             .then((data) => {
                 this.setState({ feeds: data });
             })
-            .catch((error) => console.error("Unable to get items.", error));
+            .then((error) => console.error(error));
     }
 
     changeState = (e) => {

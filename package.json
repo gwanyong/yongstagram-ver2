@@ -1,7 +1,7 @@
 {
     "name": "yongstagram-ver2",
     "version": "0.1.0",
-    "homepage": "https://gwanyong.github.io/yongstagram-ver2/",
+     "homepage": "https://gwanyong.github.io/yongstagram-ver2/",
     "private": true,
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
