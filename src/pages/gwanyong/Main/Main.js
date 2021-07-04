@@ -65,7 +65,7 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        fetch("feedData.json", {
+        fetch("/data/feedData.json", {
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
@@ -75,7 +75,9 @@ class Main extends React.Component {
             .then((data) => {
                 this.setState({ feeds: data });
             })
-            .then((error) => console.error(error));
+            .catch((error) =>
+                error.status(404).send(JSON.stringify({ error }))
+            );
     }
 
     changeState = (e) => {
