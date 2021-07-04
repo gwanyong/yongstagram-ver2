@@ -7,7 +7,7 @@ import MainGwanyong from "./pages/gwanyong/Main/Main";
 class Routes extends React.Component {
     render() {
         return (
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route exact path="/" component={LoginGwanyong} />
                     <Route
