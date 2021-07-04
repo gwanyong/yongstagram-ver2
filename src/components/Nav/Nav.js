@@ -15,7 +15,7 @@ class Nav extends React.Component {
                         alt="logo"
                     />
                     <div className="separator"></div>
-                    <Link className="title" to="/LoginGwanyong">
+                    <Link className="title" to="/">
                         Yongstagram
                     </Link>
                 </div>

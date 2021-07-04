@@ -13,7 +13,7 @@ class Login extends React.Component {
             posting: [],
         };
     }
-
+    //백엔드와 통신
     // componentDidMount() {
     //   fetch('http://10.58.6.223:8000/postings', {
     //     method: 'GET',
@@ -40,6 +40,10 @@ class Login extends React.Component {
     //     e.preventDefault();
     // };
 
+    handleSubmit = (e) => {
+        this.goToMain();
+        e.preventDefault();
+    };
     goToMain = () => {
         const { id, pw } = this.state;
         this.validateEmail(id) && this.validatePassword(pw)
